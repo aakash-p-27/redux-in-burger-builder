@@ -28,11 +28,13 @@ export const fatchIngredientsFailed = () =>{
     }
 }
 
+
 export const initIngredients = () =>{
     return dispach =>{
-         axios.get( 'https://react-burger-app-ee433.firebaseio.com/ingredients.json' )
+         axios.get( 'https://react-burger-app-ee433.firebaseio.com/ingredient.json' )
             .then( response => {
                 dispach(setIngredients(response.data));
+                console.log('asd', response)
             } )
             .catch( error => {
                 dispach(fatchIngredientsFailed());

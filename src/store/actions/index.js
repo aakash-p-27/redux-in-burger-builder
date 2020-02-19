@@ -1,2 +1,3 @@
 export {addIngredient, removeIngredient, initIngredients} from './burgerBuilder';
-export {parchaseBurgerStart} from '../actions/order';
+export {purchaseBurger, purchaseInit, fatchOrders} from '../actions/order';
+export { auth, logOut, setAuthRedirectPath } from '../actions/auth';
